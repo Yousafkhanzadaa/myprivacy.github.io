@@ -4,26 +4,28 @@ body {
   padding: 20px;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #ff99ff, #66ffff);
+  background: #D31027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #EA384D, #D31027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #EA384D, #D31027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h1 {
   font-size: 36px;
   margin-bottom: 20px;
   font-weight: 600;
-  color: #333333;
+  color: #181818;
 }
 
 h2 {
   font-size: 24px;
   margin-bottom: 10px;
   font-weight: 500;
-  color: #555555;
+  color: #1c1c1c;
 }
 
 p {
   margin-bottom: 10px;
-  color: #777777;
+  color: #585858;
 }
 
 
