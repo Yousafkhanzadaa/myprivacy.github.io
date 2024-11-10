@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebschat Support</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    :root {
+      --primary: #4f46e5;
+      --primary-dark: #4338ca;
+      --secondary: #e11d48;
+    }
+
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+
+    .card-hover {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .faq-answer.active {
+      max-height: 500px;
+    }
+
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+  </style>
+  </head>
+  <body class="gradient-bg min-h-screen">
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
+      <!-- Header Section -->
+      <div class="text-center mb-12 animate__animated animate__fadeIn">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Welcome to Celebschat
+          Support</h1>
+        <p class="text-lg text-gray-600">Your gateway to an enhanced chatting
+          experience</p>
+      </div>
+
+      <!-- Main Content -->
+      <div class="space-y-8">
+        <!-- Contact Card -->
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 card-hover animate__animated animate__fadeInUp">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg class="w-8 h-8 text-primary" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="ml-6">
+              <h2 class="text-2xl font-semibold text-gray-900 mb-4">Contact
+                Us</h2>
+              <p class="text-gray-600 mb-4">Need assistance? Our support team is
+                here to help!</p>
+              <a href="mailto:khueonstudios@gmail.com"
+                class="inline-flex items-center px-4 py-2 bg-primary text-black rounded-lg hover:bg-primary-dark transition-colors">
+                khueonstudios@gmail.com
+              </a>
+              <p class="mt-4 text-sm text-gray-500">Average response time: 24
+                hours</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 card-hover animate__animated animate__fadeInUp"
+          style="animation-delay: 0.2s">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-6">Frequently Asked
+            Questions</h2>
+          <div class="space-y-4" id="faq-container">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item border-b border-gray-200 pb-4">
+              <button
+                class="w-full flex justify-between items-center text-left">
+                <span class="text-lg font-medium text-gray-900">How do I use the
+                  coin system?</span>
+                <svg class="faq-icon w-6 h-6 text-gray-500" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+              </button>
+              <div class="faq-answer mt-2">
+                <p class="text-gray-600">The coin system enhances your
+                  experience by allowing you to unlock premium features. Earn
+                  coins through daily logins and watching ads, or purchase them
+                  directly for instant access to exclusive content.</p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item border-b border-gray-200 pb-4">
+              <button
+                class="w-full flex justify-between items-center text-left">
+                <span class="text-lg font-medium text-gray-900">Are
+                  conversations with celebrities real?</span>
+                <svg class="faq-icon w-6 h-6 text-gray-500" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+              </button>
+              <div class="faq-answer mt-2">
+                <p class="text-gray-600">No, all conversations are AI-generated
+                  to provide an engaging simulation of celebrity interactions.
+                  Our advanced AI technology creates realistic and entertaining
+                  chat experiences.</p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item border-b border-gray-200 pb-4">
+              <button
+                class="w-full flex justify-between items-center text-left">
+                <span class="text-lg font-medium text-gray-900">Why do I need to
+                  grant permissions?</span>
+                <svg class="faq-icon w-6 h-6 text-gray-500" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+              </button>
+              <div class="faq-answer mt-2">
+                <p class="text-gray-600">App permissions enable features like
+                  media sharing and notifications. We only request essential
+                  permissions to ensure the best possible user experience while
+                  maintaining your privacy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Links Section -->
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 card-hover animate__animated animate__fadeInUp"
+          style="animation-delay: 0.4s">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-6">Important
+            Links</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <a
+              href="https://yousafkhanzadaa.github.io/myprivacy.github.io/policy/celebs_chat_policy.html"
+              class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-primary hover:text-primary transition-colors">
+              <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Privacy Policy
+            </a>
+            <a
+              href="https://yousafkhanzadaa.github.io/myprivacy.github.io/policy/celebs_chat_policy.html#terms"
+              class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-primary hover:text-primary transition-colors">
+              <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Terms & Conditions
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer
+        class="mt-12 text-center text-gray-600 animate__animated animate__fadeIn"
+        style="animation-delay: 0.6s">
+        <p>© 2024 Celebschat. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const button = item.querySelector('button');
+      const answer = item.querySelector('.faq-answer');
+      
+      button.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
+        
+        // Close all FAQs
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          otherItem.classList.remove('active');
+          otherItem.querySelector('.faq-answer').classList.remove('active');
+        });
+        
+        // Toggle current FAQ
+        if (!isOpen) {
+          item.classList.add('active');
+          answer.classList.add('active');
+        }
+      });
+    });
+  </script>
+  </body>
+</html>
