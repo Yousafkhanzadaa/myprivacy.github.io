@@ -1,80 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delete Account Instructions</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Deletion - SagesChat</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+        :root {
+            --primary: #6366F1;
+            --secondary: #8B5CF6;
+        }
 
-    header {
-      background-color: #d51919;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-    }
+        .gradient-text {
+            background: linear-gradient(135deg, #DC2626, #EF4444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-    main {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+        .deletion-card {
+            animation: fadeIn 0.5s ease-out;
+        }
 
-    h2 {
-      color: #333;
-    }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-    ol {
-      list-style-type: decimal;
-      padding-left: 20px;
-    }
+        .warning-pulse {
+            animation: pulse 2s infinite;
+        }
 
-    p {
-      margin-bottom: 15px;
-    }
+        @keyframes pulse {
+            0% { background-color: rgba(220, 38, 38, 0.1); }
+            50% { background-color: rgba(220, 38, 38, 0.2); }
+            100% { background-color: rgba(220, 38, 38, 0.1); }
+        }
+    </style>
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="flex items-center justify-between">
+          <h1 class="text-2xl font-bold text-gray-900">SagesChat</h1>
+          <div class="text-red-600 font-semibold">Account Deletion</div>
+        </div>
+      </div>
+    </header>
 
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
-</head>
-<body>
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="deletion-card bg-white rounded-lg shadow-lg overflow-hidden">
+        <!-- Warning Header -->
+        <div class="bg-red-50 p-6 warning-pulse">
+          <h2 class="text-2xl font-bold text-red-600 mb-2">Account Deletion
+            Instructions</h2>
+          <p class="text-red-700">Please read carefully before proceeding. This
+            action cannot be undone.</p>
+        </div>
 
-  <header>
-    <h1>Delete Account Instructions for Celebschat</h1>
-  </header>
+        <!-- Main Content -->
+        <div class="p-6 space-y-6">
+          <!-- Steps Section -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-gray-900">Follow these steps
+              to delete your account:</h3>
+            <ol class="space-y-4 list-decimal list-inside">
+              <li class="p-3 bg-gray-50 rounded">
+                <span class="text-gray-700">Open the SagesChat app on your
+                  device</span>
+              </li>
+              <li class="p-3 bg-gray-50 rounded">
+                <span class="text-gray-700">Navigate to your profile
+                  screen</span>
+              </li>
+              <li class="p-3 bg-gray-50 rounded">
+                <span class="text-gray-700">Tap the menu button in the top-left
+                  corner to open the drawer</span>
+              </li>
+              <li class="p-3 bg-gray-50 rounded">
+                <span class="text-gray-700">Select "Delete My Account"</span>
+              </li>
+              <li class="p-3 bg-gray-50 rounded">
+                <span class="text-gray-700">Follow the confirmation steps to
+                  complete the deletion</span>
+              </li>
+            </ol>
+          </div>
 
-  <main>
-    <p>This link will guide you through the process of deleting your account for Celebschat.</p>
+          <!-- Warning Section -->
+          <div class="bg-red-50 rounded-lg p-6 space-y-4">
+            <h3 class="text-lg font-semibold text-red-700">What will be
+              deleted:</h3>
+            <ul class="list-disc list-inside space-y-2 text-red-600">
+              <li>All your chat history and messages</li>
+              <li>Your profile information and settings</li>
+              <li>All tokens and purchased content</li>
+              <li>Saved preferences and favorites</li>
+            </ul>
+          </div>
 
-    <h2>Follow these steps to request account deletion:</h2>
-    <ol>
-      <li>Open the Celebschat on your device.</li>
-      <li>Navigate to your profile screen within the app.</li>
-      <li>Look for the menu button, usually located in the top-left corner, and tap it to open the drawer.</li>
-      <li>Locate and select the option that says "Delete My Account."</li>
-      <li>Follow the on-screen instructions to confirm and complete the account deletion process.</li>
-    </ol>
+          <!-- Additional Information -->
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Important
+              Notes:</h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-600">
+              <li>Account deletion is permanent and cannot be reversed</li>
+              <li>Tokens and purchases cannot be refunded</li>
+              <li>Deletion process may take up to 30 days to complete</li>
+              <li>Some data may be retained for legal purposes</li>
+            </ul>
+          </div>
 
-    <p>Note: Account deletion will result in the permanent removal of your personal data. Please be aware that the following types of data will be deleted: Your created characters, Your all messages with celebs and characters and all the data related to your account</p>
-  </main>
+          <!-- Contact Support -->
+          <div class="border-t pt-6">
+            <p class="text-gray-600">If you're experiencing issues with the app,
+              consider contacting our support team before deletion:</p>
+            <a href="mailto:yousafkhanzadaa@gmail.com"
+              class="text-indigo-600 hover:text-indigo-800 font-medium">
+              yousafkhanzadaa@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
 
-  <footer>
-    <p>&copy; 2023 Celebschat</p>
-  </footer>
-
-</body>
+    <footer class="bg-white border-t mt-8">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <p class="text-center text-gray-600">
+          &copy; 2024 SagesChat. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
